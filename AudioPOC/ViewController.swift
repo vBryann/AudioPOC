@@ -64,7 +64,6 @@ class ViewController: UIViewController {
     lazy var playbackSlider: UISlider = {
         var slider = UISlider()
         slider.minimumValue = 0
-        
         slider.translatesAutoresizingMaskIntoConstraints = false
         slider.addTarget(self, action: #selector(playbackSliderValueChanged), for: .valueChanged)
         return slider
@@ -86,7 +85,7 @@ class ViewController: UIViewController {
         setupPermission()
         setupAudio()
         
-        // Setup UI
+        // MARK: - Setup UI
         view.backgroundColor = .white
         view.addSubview(recordButton)
         view.addSubview(playButton)
@@ -97,7 +96,7 @@ class ViewController: UIViewController {
         setupConstraints()
     }
     
-    // MARK: Utilities
+    // MARK: - Utilities
     
     func setupPermission() {
         recordingSession = AVAudioSession.sharedInstance()
