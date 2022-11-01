@@ -110,12 +110,12 @@ class ViewController: UIViewController {
                     if allowed {
                         self.recordButton.isEnabled = true
                     } else {
-                        // failed to record!
+                        print("Error")
                     }
                 }
             }
         } catch {
-            // failed to record!
+            print("Error")
         }
     }
     
@@ -227,7 +227,6 @@ class ViewController: UIViewController {
                     
                 } else {
                     // Pause recording
-                    
                     recorder.pause()
                     
                     print("paused")
